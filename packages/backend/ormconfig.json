@@ -1,0 +1,17 @@
+{
+  "name": "default",
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "docker",
+  "password": "docker",
+  "database": "nest_next_sample",
+  "synchronize": true,
+  "logging": true,
+  "entities": [
+    "dist/entities/**/*.entity.js"
+  ],
+  "migrations": [
+    "dist/migrations/**/*.js"
+  ]
+}
