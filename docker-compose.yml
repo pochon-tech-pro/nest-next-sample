@@ -38,3 +38,19 @@ services:
       - mysql
     ports:
       - "3000:3000"
+
+#  chat-server:
+#    <<: *dev-base
+#    working_dir: /app/packages/chat/server
+#    command: yarn start
+#    tty: true
+#    ports:
+#      - "4000:4000"
+
+#  chat-client:
+#    <<: *dev-base
+#    working_dir: /app/packages/chat/client
+#    command: yarn start
+#    tty: true
+#    ports:
+#      - "4001:4001"
