@@ -3,6 +3,9 @@
 - リアルタイム通信を実現するために、Socket.ioを使用
 - ClientとServerの間にWebSocket接続を確立
 
+### 事前準備
+- ホストPCにnodenvやyarnをInstall (https://pochon-tech.esa.io/posts/573)
+
 ### Server側
 
 - Node, TypeScript 環境を構築
@@ -51,6 +54,14 @@ yarn run dev
 yarn run dev:watch
 ```
 > 注: APIサーバーのように一度実行すると動き続けるプログラムではなく、この記事のHello Worldプログラムのように1度実行するとプロセスが終了するプログラムの場合は、ts-node-dev に --respawn オプションをつけます。
+
+
+### socket.ioのメソッド
+- io.sockets.on("connection", function (socket) {})を前提とする
+- socket.join(roomId): roomIdで指定した部屋に参加
+- io.to(roomId).emit(): roomIdで指定した部屋にのみメッセージ送信
+- io.to(socket.id).emit(): 送信元のあなただけ
+- io.in(roomId).emit(): Room内の送信元含む全員に送信
 
 
 ### 参考URL
