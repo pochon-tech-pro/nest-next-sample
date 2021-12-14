@@ -64,7 +64,15 @@ yarn run dev:watch
 - io.in(roomId).emit(): Room内の送信元含む全員に送信
 
 
+## Client側
+```
+cd /Users/apple/workspace/nest/packages/chat
+npx create-react-app client --template typescript
+```
+
+
 ### 参考URL
 
 - [Node環境構築](https://qiita.com/notakaos/items/3bbd2293e2ff286d9f49#npm-scripts-%E3%81%AB-dev-%E3%81%A8-devwatch-%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
 - [socket](https://ichi.pro/react-fukku-to-socket-io-o-shiyoshite-riarutaimuchattoapuri-o-kochikusuru-79550473039024)
+- [create-react-app](https://qiita.com/sanogemaru/items/05c2e9381d6ba2d9fccf#1-%E6%96%B0%E8%A6%8F%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E6%88%90)
