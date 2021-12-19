@@ -9,7 +9,8 @@
   "synchronize": true,
   "logging": true,
   "entities": [
-    "dist/entities/**/*.entity.js"
+    "dist/entities/**/*.entity.js",
+    "dist/order/infra/entities/**/*.entity.js"
   ],
   "migrations": [
     "dist/migrations/**/*.js"
