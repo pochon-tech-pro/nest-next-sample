@@ -9,3 +9,10 @@ http://localhost:xxxx/ ...frontend(Next or React) 予定
 
 http://localhost:4000 ...chatServer(Node)
 http://localhost:4001 ...chatClient(React)
+
+### Tasks 
+- 検証用
+- localhost:3000/tasks/ でDBに登録された情報が取れる
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"title":"Hello"}' localhost:3000/tasks/
+```
