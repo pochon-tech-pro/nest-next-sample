@@ -1,17 +1,14 @@
-import {Injectable} from "@nestjs/common";
+import {Inject, Injectable} from "@nestjs/common";
 import {Order} from "../../domain/model/order";
-import {OrderNo} from "../../domain/model/orderNo";
-import {Mail} from "../../domain/model/mail";
+import {IOrderRepository} from "../repository/orderRepository";
 
 @Injectable()
 export class OrdersService {
-
     constructor(
+        @Inject(IOrderRepository) private readonly repository: IOrderRepository
     ) {}
 
     async findAll(): Promise<Order> {
-        const order = new Order(new OrderNo(123), new Mail('test.com'));
-        console.log(order);
-        return order;
+        return this.repository.of();
     }
 }
