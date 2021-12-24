@@ -16,3 +16,9 @@ http://localhost:4001 ...chatClient(React)
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{"title":"Hello"}' localhost:3000/tasks/
 ```
+
+### Orders
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"mail":"yamada@example.com"}' localhost:3000/orders/
+# {"_no":{"_value":1001},"_mail":{"_value":"yamada@example.com"}}%  
+```

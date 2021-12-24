@@ -10,10 +10,14 @@ export class OrderNo {
     }
 
     static nullObject(): OrderNo {
-        return new OrderNo(0);
+        return new OrderNo(1000);
     }
 
     public value(): number {
         return this._value;
+    }
+
+    public nextNo(): OrderNo {
+        return new OrderNo(this._value + 1);
     }
 }
