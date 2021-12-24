@@ -29,6 +29,14 @@ services:
       - ./docker/db/data:/var/lib/mysql
       - ./docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
 
+  frontend:
+    << : *dev-base
+    working_dir: /app/packages/frontend
+    command: yarn dev
+    tty: true
+    ports:
+      - "3001:3001"
+
   backend:
     << : *dev-base
     working_dir: /app/packages/backend
