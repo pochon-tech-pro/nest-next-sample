@@ -1,6 +1,6 @@
 import {Body, Controller, Get, Param, Post} from '@nestjs/common';
 import {OrdersService} from "../app/service/ordersService";
-import {Order} from "../domain/model/order";
+import {Orders} from "../domain/model/Orders";
 
 @Controller('orders')
 export class OrdersController {
@@ -8,7 +8,7 @@ export class OrdersController {
     }
 
     @Get()
-    async findAll(): Promise<Order> {
+    async findAll(): Promise<Orders> {
         return await this.ordersService.findAll();
     }
 }

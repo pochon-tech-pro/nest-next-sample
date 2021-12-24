@@ -5,6 +5,14 @@ export class Mail {
         this._value = value;
     }
 
+    static create(value: string): Mail {
+        return new Mail(value);
+    }
+
+    static nullObject(): Mail {
+        return new Mail('');
+    }
+
     public value(): string {
         return this._value;
     }
